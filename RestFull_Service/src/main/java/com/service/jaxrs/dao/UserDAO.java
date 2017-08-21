@@ -1,4 +1,4 @@
-package com.service.jaxrs.dao;
+/*package com.service.jaxrs.dao;
 
 import java.util.List;
 
@@ -13,3 +13,4 @@ public interface UserDAO {
 	//public User findUserByID();
 	public boolean deleteAllUser();
 }
+*/

@@ -1,4 +1,4 @@
-package com.service.jaxrs.config;
+/*package com.service.jaxrs.config;
 
 
 
@@ -20,11 +20,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages={ "com.service.jaxrs.model" })
 public class ApplicationContext {
 	
-	/*private static String DATABASE_URL="jdbc:mysql://localhost:3306/niit_db";
+	private static String DATABASE_URL="jdbc:mysql://localhost:3306/niit_db";
 	private static String DATABASE_DRIVER="com.mysql.jdbc.Driver";
 	private static String DATABASE_DIALECT="org.hibernate.dialect.MySQLDialect";
 	private static String DATABASE_USERNAME="root";
-	private static String DATABASE_PASSWORD="ashwani";*/
+	private static String DATABASE_PASSWORD="ashwani";
 	private static String DATABASE_URL="jdbc:h2:tcp://localhost/~/REST_DB";
 	private static String DATABASE_DRIVER="org.h2.Driver";
 	private static String DATABASE_DIALECT="org.hibernate.dialect.H2Dialect";
@@ -66,3 +66,4 @@ public class ApplicationContext {
 	}
 
 }
+*/

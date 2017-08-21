@@ -16,60 +16,61 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.service.jaxrs.dao.UserDAO;
+/*import com.service.jaxrs.dao.UserDAO;*/
 import com.service.jaxrs.model.User;
 
 
 
 @RestController
 public class AppRestController {
-	
+	/*
 	@Autowired
-	UserDAO userDAO;
+	UserDAO userDAO;*/
 
 	@Autowired
 	User user;
 	
-	//List<User> list;
+	List<User> list;
 	
 
 	public AppRestController() {
-		/*list=new ArrayList<User>();
+		list=new ArrayList<User>();
 		list.add(new User(123,"amit","amit@gmail.com","a123"));
 		list.add(new User(124,"Sumit","sumit@gmail.com","s123"));
-		list.add(new User(125,"kiran","kiran@outlook.com","k123"));*/
+		list.add(new User(125,"kiran","kiran@outlook.com","k123"));
 	}
 	
 	private User findUserByID(String userID){
-		/*Iterator<User> itr=list.iterator();
+		Iterator<User> itr=list.iterator();
 		while(itr.hasNext()){
 			User user=(User)itr.next();
 			if(userID.equals(user.getUserID()))
 			   return user;
-		}*/
+		}
 		return null;
 	}
 
-	@RequestMapping("/")
+/*	@RequestMapping("/")
 	public String welcome(){
 		return "Welcome to First Restful web Service";
 	}
-	
+	*/
 	
 	
 	@RequestMapping(value="/user/",method=RequestMethod.GET)
 	public ResponseEntity<List<User>> getAllUser(){
 		
-		if(userDAO.getAllUser().isEmpty())
+		/*if(userDAO.getAllUser().isEmpty())*/
+			if(list.isEmpty())
 			return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);
 		else{
-			List<User> list=userDAO.getAllUser();
+			//List<User> list=userDAO.getAllUser();
 			return new ResponseEntity<List<User>>(list,HttpStatus.OK);
 		}
 	}
 	
 
-	@GetMapping(value="/user/{userID}")
+	/*@GetMapping(value="/user/{userID}")
 	public ResponseEntity<User> getUser(@PathVariable("userID") long userID){
 		   User user=userDAO.getUser(userID);
 		   if(user==null)
@@ -103,5 +104,5 @@ public class AppRestController {
 		userDAO.deleteAllUser();
 		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
 	}
-	
+	*/
 }

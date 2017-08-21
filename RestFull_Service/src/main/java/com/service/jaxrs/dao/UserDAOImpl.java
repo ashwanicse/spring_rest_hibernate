@@ -1,4 +1,4 @@
-package com.service.jaxrs.dao;
+/*package com.service.jaxrs.dao;
 
 import java.util.List;
 
@@ -55,8 +55,8 @@ public class UserDAOImpl implements UserDAO {
 	public List<User> getAllUser() {
 			
 		return getSession().createQuery("from User").list();// write exact class Name for table name in hql 
-		/*Criteria criteria = getSession().createCriteria(User.class);
-		List<User> list=criteria.list();*/
+		Criteria criteria = getSession().createCriteria(User.class);
+		List<User> list=criteria.list();
 		//return list;		
 	}
 
@@ -74,3 +74,4 @@ public class UserDAOImpl implements UserDAO {
 	}
   
 }
+*/
